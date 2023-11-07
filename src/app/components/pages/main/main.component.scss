@@ -1,5 +1,4 @@
 .header {
-
   .container {
     padding: 24px 140px 0 140px;
     display: grid;
@@ -76,6 +75,7 @@
 
 .main {
   margin-top: 70px;
+  margin-bottom: 140px;
 
   .bg-images {
     position: relative;
@@ -92,21 +92,24 @@
       right: 60px;
     }
   }
+
   .container {
-    display: grid;
-    grid-template-rows: 232px 112px 65px;
-    justify-items: center;
-    align-items: center;
+
+    .main-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
     .main-title {
       max-width: 547px;
-      margin-bottom: 40px;
     }
 
     .title {
-      color: var(--Black, #000);
+      color: #000;
       text-align: center;
-      font-family: Montserrat Alternates;
+      font-family: Montserrat Alternates, sans-serif;
       font-weight: 700;
       font-size: 96px;
       line-height: 100%;
@@ -121,9 +124,9 @@
     }
 
     .main-description-text {
-      color: var(--Davys-Grey, #4D4D4D);
+      color: #4D4D4D;
       text-align: center;
-      font-family: Montserrat Alternates;
+      font-family: Montserrat Alternates, sans-serif;
       font-size: 16px;
       font-weight: 500;
       line-height: 160%; /* 25.6px */
@@ -134,12 +137,299 @@
       width: 184px;
       height: 65px;
       border-radius: 8px;
-      background: var(--Black, #000);
+      background: #000;
       box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
       color: #FFF;
-      font-family: Montserrat Alternates;
+      font-family: Montserrat Alternates, sans-serif;
       font-size: 14px;
       font-weight: 700;
     }
   }
+}
+
+.playlist-daily {
+  margin-top: 120px;
+
+  .playlist-item {
+    width: 373px;
+    height: 373px;
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .playlist-icons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+
+  .playlist-icon {
+    cursor: pointer;
+  }
+
+  .playlist-bg {
+    height: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .play-list-title {
+    position: absolute;
+    color: var(--Pewter-Blue, #81ADC8);
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    z-index: 3;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+  }
+}
+
+.supported {
+  margin-top: 120px;
+  border-top: 1px solid #4D4D4D;
+  border-bottom: 1px solid #4D4D4D;
+
+  .supported-items {
+    padding: 20px 0 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    height: 34px;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .supported-by {
+    color: #000;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.453px;
+  }
+
+}
+
+.info {
+  padding: 140px 0 140px 0;
+  background: #FFF;
+  position: relative;
+
+  .info-icon {
+    position: absolute;
+    top: -75px;
+    left: 43%;
+  }
+
+  .info-title {
+    color: #000;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 120%; /* 71.16px */
+    letter-spacing: -1.186px;
+    margin: 0 auto 100px auto;
+    text-align: center;
+    max-width: 754px;
+  }
+
+  .info-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 120px;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-item-text {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px */
+    max-width: 472px;
+    margin-top: 40px;
+  }
+
+  .info-best-block {
+    background: #F7EDE8;
+    position: relative;
+    padding: 40px 0;
+  }
+
+  .top-svg {
+    position: absolute;
+    top: -63px;
+    right: -42px;
+    z-index: 3;
+  }
+
+  .right-svg {
+    position: absolute;
+    bottom: 38px;
+    left: -60px;
+    z-index: 3;
+  }
+
+  .info-best-icon-center {
+    color: #CD4631;
+    text-align: center;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+  }
+
+  .info-best-title {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 51.31px */
+    letter-spacing: -0.733px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+  }
+
+  .info-avatar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 34px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    span:nth-child(3) {
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+
+  }
+
+
+}
+
+.comments {
+  padding: 140px 0 100px 0;
+  position: relative;
+  background: #EDF3F7;
+
+  .comments-top-icon {
+    position: absolute;
+    z-index: 3;
+    top: -72px;
+    left: 600px;
+  }
+
+  .comment-title-icon {
+    position: absolute;
+    z-index: 3;
+    top: 77px;
+    left: 269px;
+  }
+
+  .comment-title {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 59px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .comment-title-text {
+    color: #4D4D4D;
+    text-align: center;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 100px;
+  }
+
+  .comment-item {
+    border-radius: 8px;
+    background: #FFF;
+    padding: 40px;
+    max-width: 570px;
+  }
+
+  .comment-item-icon {
+    color: #CD4631;
+    text-align: left;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .comment-item-text {
+    color: #000;
+    font-family: Montserrat Alternates, sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 160%;
+    margin-bottom: 20px;
+  }
+
+  .comment-item-avatar {
+    .comment-avatar-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .avatar-name {
+      color: var(--Black, #000);
+      font-family: Montserrat Alternates, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+
+    .comment-platform-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .comment-platform-name {
+      color: var(--Black, #000);
+      font-family: Montserrat Alternates, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+
 }
